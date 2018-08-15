@@ -62,7 +62,7 @@ new Vue({
                 setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
             } else {
                 //rotation done reset
-                console.log("Done at:: "+this.phase);
+                console.log("Done at:: "+this.phase+" of "+this.rotation_times["rot"+String(this.rotation).replace(".", "_")].length);
                 console.log(this.rotation_times["rot"+String(this.rotation).replace(".", "_")]);
             }
         }
