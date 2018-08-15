@@ -7,6 +7,10 @@ new Vue({
         theme: "dark",
         style: "simple",
         degrees: 0,
+        timer: 0,
+        rotation_times:{
+            rot1.1:[2,4,6]
+    }
     },
     methods: {
         selectRotation: function(rotation) {
