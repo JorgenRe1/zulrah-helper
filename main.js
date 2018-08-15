@@ -9,7 +9,7 @@ new Vue({
         degrees: 0,
         timer: 0,
         rotation_times:{
-            rot1.1:[2,4,6]
+            rot1_1:[2,4,6]
     }
     },
     methods: {
