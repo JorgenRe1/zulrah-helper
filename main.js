@@ -10,10 +10,10 @@ new Vue({
         timer: 0,
         phase: 0,
         rotation_times:{
-            rot1_1:[0, 0, 0, 0, 2000,4000,6000,2000,4000,6000],
-            rot1_2:[0, 0, 0, 0, 2000,3000],
-            rot2:[0, 0, 0, 0, 2000,4000,6000,2000,4000,6000],
-            rot3:[0, 0, 0, 0, 2000,4000,6000,2000,4000,6000]
+            rot1_1:[1, 1, 1, 1, 2000,4000,6000,2000,4000,6000],
+            rot1_2:[1, 1, 1, 1, 2000,3000],
+            rot2:[1, 1, 1, 1, 2000,4000,6000,2000,4000,6000],
+            rot3:[1, 1, 1, 1, 2000,4000,6000,2000,4000,6000]
     }
     },
     methods: {
@@ -54,7 +54,7 @@ new Vue({
             }
         },
         nextPhase: function(){
-            this.phase++;
+            this.phase+=1;
             console.log("Phase: "+this.phase);
             if (this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]){
                 setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
