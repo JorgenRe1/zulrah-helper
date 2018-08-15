@@ -179,19 +179,19 @@
                         <div v-if="phase == 4" class="column is-4">
                             <img :src="'images/two/7-' + style + '.png'" :style="'transform: rotate(' + degrees + 'deg);'" class="phase-image" alt="" />
                         </div>
-                        <div class="column is-4">
-                            <img v-if="phase == 4 || phase == 5":src="'images/two/5-' + style + '.png'" :style="'transform: rotate(' + degrees + 'deg);'" class="phase-image" alt="" />
+                        <div v-if="phase == 4 || phase == 5" class="column is-4">
+                            <img :src="'images/two/5-' + style + '.png'" :style="'transform: rotate(' + degrees + 'deg);'" class="phase-image" alt="" />
                         </div>
-                        <div class="column is-4">
+                        <div v-if="phase == 5 || phase == 6" class="column is-4">
                             <img :src="'images/two/6-' + style + '.png'" :style="'transform: rotate(' + degrees + 'deg);'" class="phase-image" alt="" />
                         </div>
-                        <div class="column is-4">
+                        <div v-if="phase == 6 || phase == 7"class="column is-4">
                             <img :src="'images/two/7-' + style + '.png'" :style="'transform: rotate(' + degrees + 'deg);'" class="phase-image" alt="" />
                         </div>
-                        <div class="column is-4">
+                        <div v-if="phase == 7 || phase == 8"class="column is-4">
                             <img :src="'images/two/8-' + style + '.png'" :style="'transform: rotate(' + degrees + 'deg);'" class="phase-image" alt="" />
                         </div>
-                        <div class="column is-4">
+                        <div v-if="phase == 8"class="column is-4">
                             <img :src="'images/two/9-' + style + '.png'" :style="'transform: rotate(' + degrees + 'deg);'" class="phase-image" alt="" />
                         </div>
                     </div>
