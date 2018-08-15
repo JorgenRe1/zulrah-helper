@@ -18,6 +18,7 @@ new Vue({
             this.rotation = rotation;
             if (rotation > 1){
                 //Start countdown
+                console.log("Going to rot with time to first finnish: "+this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
                 setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
             }
         },
