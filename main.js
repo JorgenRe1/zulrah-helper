@@ -10,7 +10,7 @@ new Vue({
         timer: 0,
         phase: 0,
         rotation_times:{
-            rot1_1:[2,4,6]
+            rot1_1:[2000,4000,6000]
     }
     },
     methods: {
