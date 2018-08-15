@@ -7,7 +7,6 @@ new Vue({
         theme: "dark",
         style: "simple",
         degrees: 0,
-        timer: 0,
         phase: 0,
         rotation_times:{
             rot1_1:[1, 1, 1, 1, 2000,4000,6000,2000,4000,6000],
@@ -19,7 +18,10 @@ new Vue({
     methods: {
         selectRotation: function(rotation) {
             this.rotation = rotation;
-            if (rotation > 1){
+            if (rotation == 0){
+                //reset btn hit
+                this.phase = 0;
+            }else if (rotation > 1){
                 //Start countdown
                 console.log("Going to rot with time to first finnish: "+this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
                 setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
