@@ -58,12 +58,12 @@ new Vue({
         nextPhase: function(){
             this.phase+=1;
             console.log("Phase: "+this.phase);
+            console.log(this.rotation_times["rot"+String(this.rotation).replace(".", "_")]);
             if (this.phase > this.rotation_times["rot"+String(this.rotation).replace(".", "_")].length){
                 setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
             } else {
                 //rotation done reset
                 console.log("Done at:: "+this.phase+" of "+this.rotation_times["rot"+String(this.rotation).replace(".", "_")].length);
-                console.log(this.rotation_times["rot"+String(this.rotation).replace(".", "_")]);
             }
         }
     }
