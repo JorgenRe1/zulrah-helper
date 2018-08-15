@@ -61,6 +61,7 @@ new Vue({
             } else {
                 //rotation done reset
                 console.log("Done at:: "+this.phase);
+                console.log(this.rotation_times["rot"+String(this.rotation).replace(".", "_")]);
             }
         }
     }
