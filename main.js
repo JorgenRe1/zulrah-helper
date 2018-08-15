@@ -53,7 +53,7 @@ new Vue({
         nextPhase: function(){
             this.phase++;
             console.log("Phase: "+this.phase);
-            if (this.phase[]){
+            if (this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]){
                 setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
             } else {
                 //rotation done reset
