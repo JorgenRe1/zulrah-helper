@@ -8,6 +8,7 @@ new Vue({
         style: "simple",
         degrees: 0,
         timer: 0,
+        phase: 0,
         rotation_times:{
             rot1_1:[2,4,6]
     }
@@ -15,6 +16,10 @@ new Vue({
     methods: {
         selectRotation: function(rotation) {
             this.rotation = rotation;
+            if (rotation > 1){
+                //Start countdown
+                setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
+            }
         },
         toggleTheme: function () {
             if (this.theme == "light") {
@@ -42,6 +47,16 @@ new Vue({
                 this.degrees -= 90;
             } else {
                 this.degrees += 90;
+            }
+        },
+        nextPhase: function(){
+            this.phase++;
+            console.log("Phase: "+this.phase);
+            if (this.phase[]){
+                setTimeout(this.nextPhase, this.rotation_times["rot"+String(this.rotation).replace(".", "_")][this.phase]);
+            } else {
+                //rotation done reset
+                console.log("Done at: "+this.phase-1);
             }
         }
     }
